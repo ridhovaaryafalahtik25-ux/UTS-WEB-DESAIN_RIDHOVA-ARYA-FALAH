@@ -24,11 +24,14 @@ body {
     display: flex;
 }
 
+/*  BAGIAN KIRI */
+
 .branding-section {
     width: 52%;
     min-height: 100vh;
     position: relative;
     overflow: hidden;
+
     background: linear-gradient(
         135deg,
         #4f46e5,
@@ -124,6 +127,8 @@ body {
 }
 
 
+/* BAGIAN FORM */
+
 .form-section {
     width: 48%;
     min-height: 100vh;
@@ -160,9 +165,13 @@ body {
     margin-bottom: 30px;
 }
 
+
+/* GOOGLE BUTTON */
+
 .btn-sso {
     width: 100%;
     height: 52px;
+
     border: 1px solid var(--border);
     background: white;
     border-radius: 8px;
@@ -190,11 +199,16 @@ body {
     color: #4285f4;
 }
 
+
+/*   DIVIDER */
+
 .divider {
     display: flex;
     align-items: center;
     gap: 15px;
+
     margin: 27px 0;
+
     color: var(--gray);
     font-size: 13px;
 }
@@ -206,6 +220,9 @@ body {
     flex: 1;
     background: #e5e7eb;
 }
+
+
+/*FORM INPUT */
 
 .login-form {
     display: flex;
@@ -229,6 +246,7 @@ body {
 .input-group input[type="password"] {
     width: 100%;
     height: 50px;
+
     padding: 0 15px;
 
     border: 1px solid var(--border);
@@ -236,17 +254,23 @@ body {
 
     font-size: 14px;
     outline: none;
+
     transition: 0.2s ease;
 }
 
 .input-group input:focus {
     border-color: var(--blue);
-    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+
+    box-shadow:
+        0 0 0 3px rgba(79, 70, 229, 0.1);
 }
 
 .input-group input::placeholder {
     color: #9ca3af;
 }
+
+
+/*  PASSWORD */
 
 .password-header {
     display: flex;
@@ -264,6 +288,9 @@ body {
 .forgot-link:hover {
     text-decoration: underline;
 }
+
+
+/*   REMEMBER ME */
 
 .checkbox-group {
     display: flex;
@@ -283,6 +310,9 @@ body {
     color: #374151;
     cursor: pointer;
 }
+
+
+/* SIGN IN BUTTON */
 
 .btn-primary {
     width: 100%;
@@ -305,9 +335,14 @@ body {
     background: var(--blue-dark);
 }
 
+
+/* SIGN UP */
+
 .signup-prompt {
     text-align: center;
+
     margin-top: 25px;
+
     color: var(--gray);
     font-size: 14px;
 }
@@ -322,6 +357,8 @@ body {
     text-decoration: underline;
 }
 
+
+/*    TABLET */
 
 @media (max-width: 1023px) {
 
@@ -350,15 +387,62 @@ body {
 }
 
 
+/* =========================
+   HP
+========================= */
+
 @media (max-width: 767px) {
 
+    .split-layout {
+        display: flex;
+        flex-direction: column;
+    }
+
     .branding-section {
-        display: none;
+        display: block;
+        width: 100%;
+        min-height: auto;
+    }
+
+    .branding-overlay {
+        min-height: auto;
+        padding: 25px 22px 0;
+    }
+
+    .brand-logo {
+        font-size: 24px;
+    }
+
+    .branding-text {
+        margin-top: 55px;
+        margin-bottom: 25px;
+    }
+
+    .small-text {
+        font-size: 11px;
+        margin-bottom: 12px;
+    }
+
+    .branding-text h1 {
+        font-size: 34px;
+        line-height: 1.1;
+        margin-bottom: 14px;
+    }
+
+    .artist {
+        font-size: 13px;
+    }
+
+    .image-wrapper {
+        height: 230px;
+        margin-top: 10px;
+        border-radius: 20px 20px 0 0;
     }
 
     .form-section {
-        min-height: 100vh;
-        padding: 35px 22px;
+        width: 100%;
+        min-height: auto;
+        padding: 40px 22px 50px;
         align-items: flex-start;
     }
 
@@ -367,27 +451,59 @@ body {
     }
 
     .mobile-logo {
-        display: block;
+        display: none;
     }
 
     .form-title {
-        font-size: 29px;
+        font-size: 28px;
     }
 
     .form-subtitle {
         font-size: 14px;
+        margin-bottom: 25px;
+    }
+
+    .btn-sso {
+        height: 50px;
+    }
+
+    .divider {
+        margin: 23px 0;
     }
 }
 
 
+/* Tampilan HP */
+
 @media (max-width: 400px) {
 
+    .branding-overlay {
+        padding: 22px 18px 0;
+    }
+
+    .brand-logo {
+        font-size: 22px;
+    }
+
+    .branding-text {
+        margin-top: 45px;
+    }
+
+    .branding-text h1 {
+        font-size: 29px;
+    }
+
+    .image-wrapper {
+        height: 190px;
+        border-radius: 16px 16px 0 0;
+    }
+
     .form-section {
-        padding: 28px 18px;
+        padding: 35px 18px 45px;
     }
 
     .form-title {
-        font-size: 26px;
+        font-size: 25px;
     }
 
     .password-header {
